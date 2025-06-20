@@ -1,7 +1,7 @@
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open("mi-cache-v1").then((cache) =>
-      cache.addAll(["/", "/index.html", "/style.css", "/script.js", "/icon-192.png"])
+      cache.addAll(["/", "/index.html", "/style.css", "/script.js", "/https://shre.ink/xwfN"])
     )
   );
 });
