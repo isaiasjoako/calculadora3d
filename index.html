@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <link rel="stylesheet" href="./style.css">
         <link rel="manifest" href="./manifest.json" />
         <meta name="theme-color" content="#009688" />
     </head>
+    <body>
+        <header>
+            <img src="./Imagenes/1.png" alt="logo prouth">
+            <h2>PROUTH3D</h2>
+            <img src="">
+        </header>
+        <h2>Calculadora</h2>
+
+        <label>Filamento 1:<input type="number" id="p1"/></label>
+        <label>Filamento 2: <input type="number" id="p2"/></label>
+        <label>Filamento 3: <input type="number" id="p3"/></label>
+        <label>Valor Slicer: <input type="number" id="vc"/></label>
+
+        <label>Aumento(ganancia):
+        <select id="aumento">
+            <option value="0.1">10%</option>
+            <option value="0.2">20%</option>
+            <option value="0.3">30%</option>
+            <option value="0.4">40%</option>
+            <option value="0.5">50%</option>
+        </select>
+        </label>
+
+        <button onclick="calcular()">Calcular</button>
+
+        <h3>Precio Final: <span id="resultado">---</span></h3>
+
+        <script>
+            function calcular() {
+                const p1 = parseFloat(document.getElementById("p1").value);
+                const p2 = parseFloat(document.getElementById("p2").value);
+                const p3 = parseFloat(document.getElementById("p3").value);
+                const vc = parseFloat(document.getElementById("vc").value);
+                const a = parseFloat(document.getElementById("aumento").value);
+                
+                if (isNaN(p1) || isNaN(p2) || isNaN(p3) || isNaN(vc) || isNaN(a)) {
+                    alert("Por favor completá todos los campos con valores numéricos.");
+                return;
+                }
+
+                const promedio = (p1 + p2 + p3) / 3;
+                const vi = (promedio * vc) / 10000;
+                const resultado = vi / (1 - a);
+
+                document.getElementById("resultado").textContent = resultado.toFixed(2);
+            }
+        </script>
+    </body>
 </html>
 
 
