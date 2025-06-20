@@ -1,10 +1,12 @@
 {
   "name": "Calculadora de Costos",
+  "orientation": "portrait",
+  "categories":["bussiness", "Tools"],
   "short_name": "PROUTHCALC",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#009688",
+  "background_color": "#f5f5f8",
+  "theme_color": "#f5f5f8",
   "icons": [
     {
       "src": "https://shre.ink/xwfN",
@@ -17,4 +19,5 @@
       "type": "image/png"
     }
   ]
+  
 }
