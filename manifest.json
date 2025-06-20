@@ -1,7 +1,10 @@
 {
   "name": "Calculadora de Costos",
   "orientation": "portrait",
-  "categories":["bussiness", "Tools"],
+  "categories": [
+    "bussiness",
+    "Tools"
+  ],
   "short_name": "PROUTHCALC",
   "start_url": "./index.html",
   "display": "standalone",
@@ -19,5 +22,4 @@
       "type": "image/png"
     }
   ]
-  
 }
