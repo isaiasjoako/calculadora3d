@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
         <link rel="manifest" href="./manifest.json"/>
         <meta name="theme-color" content="#009688"/>
     </head>
@@ -11,41 +11,43 @@
             <img id="logo" src="./Imagenes/1.png" alt="logo prouth">
             <h2>CALCULADORA</h2>
         </header>
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide">
-                    <img src="https://shre.ink/xVgh" alt="Imagen 1">
-                    <h3>FILAMENTO 1</h3>
-                    <input type="number" id="p1" value="13999"/>
-                </div>
-                <div class="slide">
-                    <img src="https://shre.ink/xVgj" alt="Imagen 2">
-                    <h3>FILAMENTO 2</h3>
-                    <input type="number" id="p2" value="14799"/>
-                </div>
-                <div class="slide">
-                    <img src="https://shre.ink/xVg3" alt="Imagen 3">
-                    <h3>FILAMENTO 3</h3>
-                    <input type="number" id="p3" value="16999"/>
-                </div>
-            </div>
-        </div>
-        
-
-        
-        
-        
-        <label>Valor Slicer: <input type="number" id="vc"/></label>
-
-        <label>Aumento(ganancia):
-        <select id="aumento">
-            <option value="0.1">10%</option>
-            <option value="0.2">20%</option>
-            <option value="0.3">30%</option>
-            <option value="0.4">40%</option>
-            <option value="0.5">50%</option>
-        </select>
-        </label>
+        <section>
+            <article>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="https://shre.ink/xVgh" alt="Imagen 1">
+                            <h4>FILAMENTO 1</h4>
+                            <input type="number" id="p1" value="13999"/>
+                        </div>
+                        <div class="slide">
+                            <img src="https://shre.ink/xVgj" alt="Imagen 2">
+                            <h4>FILAMENTO 2</h4>
+                            <input type="number" id="p2" value="14799"/>
+                        </div>
+                        <div class="slide">
+                            <img src="https://shre.ink/xVg3" alt="Imagen 3">
+                            <h4>FILAMENTO 3</h4>
+                            <input type="number" id="p3" value="16999"/>
+                        </div>
+                    </div>
+                 </div>
+            </article>
+            <article>
+                <h4>VALOR SLICER</h4>
+                <input type="number" id="vc"/></label>
+            </article>
+            <article>
+                <h4>AUMENTO (GANANCIA)</h4>
+                <select id="aumento">
+                    <option value="0.1">10%</option>
+                    <option value="0.2">20%</option>
+                    <option value="0.3">30%</option>
+                    <option value="0.4">40%</option>
+                    <option value="0.5">50%</option>
+                </select>
+            </article>
+        </section>
 
         <button id="boton-calcular" onclick="calcular()">Calcular</button>
 
@@ -79,5 +81,3 @@
         </script>
     </body>
 </html>
-
-
