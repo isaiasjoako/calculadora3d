@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="./style.css">
-        <link rel="manifest" href="./manifest.json" />
-        <meta name="theme-color" content="#009688" />
+        <link rel="manifest" href="./manifest.json"/>
+        <meta name="theme-color" content="#009688"/>
     </head>
     <body>
         <header>
-            <img src="./Imagenes/1.png" alt="logo prouth">
-            <h2>PROUTH3D</h2>
-            <img src="">
+            <img id="logo" src="./Imagenes/1.png" alt="logo prouth">
+            <h2>CALCULADORA</h2>
         </header>
-        <h2>Calculadora</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://shre.ink/xVgh" alt="Imagen 1">
+                    <h3>FILAMENTO 1</h3>
+                    <input type="number" id="p1" value="13999"/>
+                </div>
+                <div class="slide">
+                    <img src="https://shre.ink/xVgj" alt="Imagen 2">
+                    <h3>FILAMENTO 2</h3>
+                    <input type="number" id="p2" value="14799"/>
+                </div>
+                <div class="slide">
+                    <img src="https://shre.ink/xVg3" alt="Imagen 3">
+                    <h3>FILAMENTO 3</h3>
+                    <input type="number" id="p3" value="16999"/>
+                </div>
+            </div>
+        </div>
+        
 
-        <label>Filamento 1:<input type="number" id="p1"/></label>
-        <label>Filamento 2: <input type="number" id="p2"/></label>
-        <label>Filamento 3: <input type="number" id="p3"/></label>
+        
+        
+        
         <label>Valor Slicer: <input type="number" id="vc"/></label>
 
         <label>Aumento(ganancia):
@@ -28,10 +47,15 @@
         </select>
         </label>
 
-        <button onclick="calcular()">Calcular</button>
+        <button id="boton-calcular" onclick="calcular()">Calcular</button>
 
         <h3>Precio Final: <span id="resultado">---</span></h3>
 
+        <footer>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </footer>
         <script>
             function calcular() {
                 const p1 = parseFloat(document.getElementById("p1").value);
@@ -49,7 +73,8 @@
                 const vi = (promedio * vc) / 10000;
                 const resultado = vi / (1 - a);
 
-                document.getElementById("resultado").textContent = resultado.toFixed(2);
+                document.getElementById("resultado").textContent = "$" + resultado.toFixed(2) +" ARS";
+                alert("El resultado es: " + resultado.toFixed(2))
             }
         </script>
     </body>
